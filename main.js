@@ -24,10 +24,34 @@ function memoryNumeri(){
         document.querySelector('main').append(spanNum)
     }
 
-    setTimeout(secondaParte, 300);
+    setTimeout(secondaParte, 3000);
+
 }
 
 
 function secondaParte(){
-    
+    document.querySelector('main').innerHTML = ''
+
+    let domanda = document.createElement('p')
+    domanda.innerText = 'Clicca sul bottone di fianco per inserire i numeri appena scomparsi'
+
+    let bottonePrompt = document.createElement('button')
+    bottonePrompt.innerText= 'clicca qua'
+
+    document.querySelector('main').append(domanda, bottonePrompt)
+
+    bottonePrompt.addEventListener('click', function(){
+        funzionePrompt();
+    })
+}
+
+function funzionePrompt(){
+
+    let arrayNumeriDue = []
+
+    for(let i=0; i<5; i++){
+        arrayNumeriDue.push(prompt(`Inserisci numero ${i+1}`))
+    }
+    console.log(arrayNumeriDue)
+
 }
