@@ -71,6 +71,9 @@ function funzionePrompt(){
         }
     }
 
+    
+
+
     let controllo = document.createElement('p')
     controllo.innerText=`hai azzeccato un totale di ${contatore} numeri`
     document.getElementById('divControllo').append(controllo)
